@@ -10,30 +10,32 @@ function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-brand-cyan/20 bg-[#002B47] font-gotham text-white">
-      <nav className="flex h-20 items-center justify-between gap-4 px-5 text-sm md:px-8">
+    <header className="sticky top-0 z-50 border-b-4 border-brand-green-light bg-brand-blue text-white">
+      <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-5 text-sm md:px-8">
         <button
           type="button"
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}
-          className="cursor-pointer text-2xl transition-colors hover:text-brand-cyan-light xl:hidden"
+          className="cursor-pointer text-2xl xl:hidden"
         >
           {open ? <RxCross2 /> : <RxHamburgerMenu />}
         </button>
 
         <Link to="/" className="cursor-pointer">
-          <img className="w-40" src="/icon1.svg" alt="TICAdvisor Logo" />
+          <img className="w-40" src="/icon1.svg" alt="TICAdvisor logo" />
         </Link>
 
-        <ul className="hidden h-full items-center justify-between font-custom xl:flex">
+        <ul className="hidden h-full items-center xl:flex">
           {navbarLinks.map((link) => (
-            <li key={link.name}>
+            <li key={link.name} className="h-full">
               <Link
                 to={link.path}
                 activeOptions={{ exact: link.path === "/" }}
-                activeProps={{ className: "text-brand-green-light" }}
-                inactiveProps={{ className: "text-white/90" }}
-                className="group flex h-full items-center justify-center px-4 py-4 transition-colors duration-200 hover:text-brand-cyan-light"
+                activeProps={{
+                  className: "text-brand-green-light border-brand-green-light",
+                }}
+                inactiveProps={{ className: "text-white/90 border-transparent" }}
+                className="flex h-full items-center border-b-4 px-4 text-xs font-bold uppercase tracking-widest hover:text-brand-green-light"
               >
                 {link.name}
               </Link>
@@ -43,25 +45,17 @@ function Navbar() {
 
         <div className="hidden items-center gap-4 md:flex">
           <Link to="/contact">
-            <Button
-              variant="outline"
-              className="px-3 py-1 transition-colors hover:border-brand-cyan-light md:px-6 md:py-2"
-            >
-              Contact Sales
-            </Button>
+            <Button className="px-6 py-2.5 text-xs">Contact sales</Button>
           </Link>
-          <Button
-            variant="ghost"
-            className="hidden px-6 py-2 text-white/90 transition-colors hover:bg-white/10 hover:text-white md:block"
-          >
+          <Button variant="ghost" className="px-2 py-2 text-xs">
             Login
           </Button>
-          <GoSearch className="ml-2 h-6 w-6 cursor-pointer text-white/80 transition-colors hover:text-brand-cyan-light" />
+          <GoSearch className="h-5 w-5 cursor-pointer text-white/80 hover:text-brand-green-light" />
         </div>
       </nav>
 
       {open && (
-        <ul className="border-t border-white/10 bg-[#002B47] px-5 pb-4 xl:hidden">
+        <ul className="border-t border-white/10 bg-brand-blue px-5 pb-4 xl:hidden">
           {navbarLinks.map((link) => (
             <li key={link.name}>
               <Link
@@ -70,7 +64,7 @@ function Navbar() {
                 onClick={() => setOpen(false)}
                 activeProps={{ className: "text-brand-green-light" }}
                 inactiveProps={{ className: "text-white/90" }}
-                className="block border-b border-white/5 py-3 transition-colors hover:text-brand-cyan-light"
+                className="block border-b border-white/10 py-3 text-xs font-bold uppercase tracking-widest"
               >
                 {link.name}
               </Link>
