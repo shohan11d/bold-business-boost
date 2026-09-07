@@ -10,7 +10,7 @@ function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b-4 border-brand-green-light bg-brand-blue text-white">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-brand-blue text-white">
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-5 text-sm md:px-8">
         <button
           type="button"
@@ -32,10 +32,10 @@ function Navbar() {
                 to={link.path}
                 activeOptions={{ exact: link.path === "/" }}
                 activeProps={{
-                  className: "text-brand-green-light border-brand-green-light",
+                  className: "text-brand-green-light after:scale-x-100",
                 }}
-                inactiveProps={{ className: "text-white/90 border-transparent" }}
-                className="flex h-full items-center border-b-4 px-4 text-xs font-bold uppercase tracking-widest hover:text-brand-green-light"
+                inactiveProps={{ className: "text-white/90 after:scale-x-0" }}
+                className="relative flex h-full items-center px-4 text-xs font-bold uppercase tracking-widest hover:text-brand-green-light after:absolute after:bottom-0 after:left-4 after:right-4 after:h-[3px] after:bg-brand-green-light after:transition-transform after:origin-left"
               >
                 {link.name}
               </Link>
