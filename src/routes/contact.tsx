@@ -59,7 +59,7 @@ function ContactPage() {
       <section className="px-5 py-16 lg:py-24">
         <div className="custom-container grid grid-cols-1 gap-12 lg:grid-cols-[1.2fr_1fr]">
           <FadeInUp animation="animate-slide-in-left">
-            <h2 className="mb-6 font-gotham text-3xl font-bold text-brand-blue lg:text-4xl">
+            <h2 className="mb-6 font-gotham text-3xl font-black uppercase tracking-tight leading-[0.95] text-brand-blue lg:text-4xl">
               Send us a message
             </h2>
 

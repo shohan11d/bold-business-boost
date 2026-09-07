@@ -76,7 +76,7 @@ function EventsPage() {
       <section className="px-5 py-16 lg:py-24">
         <div className="custom-container">
           <FadeInUp>
-            <h2 className="mb-12 font-gotham text-3xl font-bold text-brand-blue lg:text-5xl">
+            <h2 className="mb-12 font-gotham text-3xl font-black uppercase tracking-tight leading-[0.95] text-brand-blue lg:text-5xl">
               Upcoming
             </h2>
           </FadeInUp>
@@ -127,7 +127,7 @@ function EventsPage() {
       <section className="bg-gray-50 px-5 py-16 lg:py-24">
         <div className="custom-container">
           <FadeInUp>
-            <h2 className="mb-10 font-gotham text-3xl font-bold text-brand-blue lg:text-5xl">
+            <h2 className="mb-10 font-gotham text-3xl font-black uppercase tracking-tight leading-[0.95] text-brand-blue lg:text-5xl">
               Past sessions
             </h2>
           </FadeInUp>

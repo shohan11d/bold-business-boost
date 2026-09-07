@@ -109,7 +109,7 @@ function ServicesPage() {
       <section className="px-5 py-16 lg:py-24">
         <div className="custom-container">
           <FadeInUp>
-            <h2 className="mb-4 font-gotham text-3xl font-bold text-brand-blue lg:text-5xl">
+            <h2 className="mb-4 font-gotham text-3xl font-black uppercase tracking-tight leading-[0.95] text-brand-blue lg:text-5xl">
               Core capabilities
             </h2>
             <p className="mb-12 max-w-3xl font-gotham text-base text-gray-600 lg:text-lg">
@@ -146,7 +146,7 @@ function ServicesPage() {
       <section className="px-5 py-16 lg:py-24">
         <div className="custom-container">
           <FadeInUp>
-            <h2 className="mb-12 font-gotham text-3xl font-bold text-brand-blue lg:text-5xl">
+            <h2 className="mb-12 font-gotham text-3xl font-black uppercase tracking-tight leading-[0.95] text-brand-blue lg:text-5xl">
               How we work
             </h2>
           </FadeInUp>

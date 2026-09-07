@@ -87,7 +87,7 @@ function AboutPage() {
       <section className="px-5 py-16 lg:py-24">
         <div className="custom-container grid grid-cols-1 gap-12 lg:grid-cols-2">
           <FadeInUp animation="animate-slide-in-left">
-            <h2 className="mb-6 font-gotham text-3xl font-bold text-brand-blue lg:text-5xl">
+            <h2 className="mb-6 font-gotham text-3xl font-black uppercase tracking-tight leading-[0.95] text-brand-blue lg:text-5xl">
               Our mission
             </h2>
             <p className="mb-4 font-gotham text-base leading-relaxed text-gray-600 lg:text-lg">
@@ -136,7 +136,7 @@ function AboutPage() {
       <section className="px-5 py-16 lg:py-24">
         <div className="custom-container">
           <FadeInUp>
-            <h2 className="mb-12 font-gotham text-3xl font-bold text-brand-blue lg:text-5xl">
+            <h2 className="mb-12 font-gotham text-3xl font-black uppercase tracking-tight leading-[0.95] text-brand-blue lg:text-5xl">
               What we stand for
             </h2>
           </FadeInUp>
@@ -164,7 +164,7 @@ function AboutPage() {
       <section className="bg-gray-50 px-5 py-16 lg:py-24">
         <div className="custom-container">
           <FadeInUp>
-            <h2 className="mb-12 font-gotham text-3xl font-bold text-brand-blue lg:text-5xl">
+            <h2 className="mb-12 font-gotham text-3xl font-black uppercase tracking-tight leading-[0.95] text-brand-blue lg:text-5xl">
               Our history
             </h2>
           </FadeInUp>
