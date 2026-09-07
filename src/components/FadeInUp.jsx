@@ -1,7 +1,14 @@
 // Animation removed for performance: this is now a plain wrapper that renders
 // its children immediately (no IntersectionObserver, no transitions).
-const FadeInUp = ({ children, className = "" }) => {
-  return <div className={className}>{children}</div>;
+// `delay` / `animation` props are accepted and ignored for compatibility.
+const FadeInUp = ({ children, className = "", delay, animation, ...rest }) => {
+  void delay;
+  void animation;
+  return (
+    <div className={className} {...rest}>
+      {children}
+    </div>
+  );
 };
 
 export default FadeInUp;
