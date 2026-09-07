@@ -1,44 +1,29 @@
-import React from "react";
-import FadeInUp from "./FadeInUp";
-
 const ActOnIt = () => {
   return (
-    <section className="overflow-hidden bg-white py-15 lg:py-24 px-5">
-      <div className="mx-auto flex max-w-[1100px] flex-col items-center">
-        {/* Header Section */}
-        <div className="text-center mb-10">
-          <FadeInUp>
-            <h2 className="mb-4 font-gotham text-2xl lg:text-6xl font-bold leading-tight tracking-tight text-brand-blue">
-              Don't just identify risks.
-            </h2>
-          </FadeInUp>
-          <FadeInUp delay="delay-100">
-            <h1 className="mt-10 cursor-default bg-clip-text font-gotham text-6xl md:text-9xl font-black tracking-tight text-transparent transition-all duration-500 bg-linear-to-r from-brand-blue to-brand-green">
-              Act On It.
-            </h1>
-          </FadeInUp>
+    <section className="overflow-hidden bg-white px-5 py-20 lg:py-28">
+      <div className="mx-auto max-w-[1100px]">
+        <div className="border-l-8 border-brand-green pl-6 md:pl-10">
+          <h2 className="font-gotham text-2xl font-bold uppercase tracking-tight text-brand-blue lg:text-4xl">
+            Don't just identify risks.
+          </h2>
+          <h3 className="mt-2 font-gotham text-6xl font-black uppercase leading-[0.9] tracking-tighter text-brand-blue md:text-9xl">
+            Act on it.
+          </h3>
         </div>
 
-        {/* Text Blocks */}
-        {/* Paragraph 1 - Left Staggered */}
-        <FadeInUp delay="delay-200" animation="animate-slide-in-left">
-          <p className="mt-3 mb-6 md:pr-[20vw] font-gotham text-base md:text-2xl font-medium leading-relaxed text-left text-gray-700">
+        <div className="mt-14 grid gap-10 md:grid-cols-2">
+          <p className="text-base font-medium leading-relaxed text-gray-700 md:text-xl">
             In the fast-paced world of global trade and production, simply
             knowing your standards isn't enough. You need actionable insights
-            that allow you to anticipate challenges before they become
-            liabilities.
+            that let you anticipate challenges before they become liabilities.
           </p>
-        </FadeInUp>
-
-        {/* Paragraph 2 - Right Staggered */}
-        <FadeInUp delay="delay-300" animation="animate-slide-in-right">
-          <p className="mt-3 mb-6 md:pl-[25vw] font-gotham text-base md:text-2xl font-medium leading-relaxed text-left text-gray-700">
+          <p className="text-base font-medium leading-relaxed text-gray-700 md:text-xl">
             TicAdvisor provides a comprehensive suite of verification,
-            inspection, and certification tools that turn complex data into
+            inspection and certification tools that turn complex data into
             decisive action. Stay compliant, ensure safety, and lead with
             confidence.
           </p>
-        </FadeInUp>
+        </div>
       </div>
     </section>
   );
