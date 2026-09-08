@@ -31,11 +31,9 @@ function Navbar() {
               <Link
                 to={link.path}
                 activeOptions={{ exact: link.path === "/" }}
-                activeProps={{
-                  className: "text-brand-green-light after:scale-x-100",
-                }}
-                inactiveProps={{ className: "text-white/90 after:scale-x-0" }}
-                className="relative flex h-full items-center px-4 text-xs font-bold uppercase tracking-widest hover:text-brand-green-light after:absolute after:bottom-0 after:left-4 after:right-4 after:h-[3px] after:bg-brand-green-light after:transition-transform after:origin-left"
+                activeProps={{ className: "text-brand-green-light" }}
+                inactiveProps={{ className: "text-white/90" }}
+                className="flex h-full items-center px-4 text-xs font-bold uppercase tracking-widest hover:text-brand-green-light"
               >
                 {link.name}
               </Link>

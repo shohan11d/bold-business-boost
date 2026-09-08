@@ -1,5 +1,6 @@
 import Button from "./Button";
 import GlowBackground from "./GlowBackground";
+import CountUp from "./CountUp";
 
 const STATS = [
   { value: "60+", label: "Countries" },
@@ -43,7 +44,7 @@ function Hero() {
           {STATS.map((stat) => (
             <div key={stat.label} className="border-r border-white/10 py-6 pr-4 last:border-r-0">
               <p className="font-gotham text-3xl font-black text-white lg:text-5xl">
-                {stat.value}
+                <CountUp value={stat.value} />
               </p>
               <p className="mt-1 text-[11px] font-bold uppercase tracking-widest text-brand-cyan-light">
                 {stat.label}

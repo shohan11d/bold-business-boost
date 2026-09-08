@@ -5,6 +5,7 @@ import PageHero from "../components/PageHero";
 import FadeInUp from "../components/FadeInUp";
 import Button from "../components/Button";
 import GlowBackground from "../components/GlowBackground";
+import CountUp from "../components/CountUp";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -122,7 +123,7 @@ function AboutPage() {
             {STATS.map((stat, idx) => (
               <FadeInUp key={stat.label} delay={`delay-${(idx % 4) * 100}`}>
                 <p className="font-gotham text-4xl font-black text-brand-green-light lg:text-6xl">
-                  {stat.value}
+                  <CountUp value={stat.value} />
                 </p>
                 <p className="mt-2 font-gotham text-xs uppercase tracking-widest text-white/80">
                   {stat.label}
