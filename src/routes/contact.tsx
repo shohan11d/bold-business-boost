@@ -27,9 +27,9 @@ export const Route = createFileRoute("/contact")({
 });
 
 const OFFICES = [
-  { city: "Geneva", line: "Rue du Marché 12, 1204 Geneva, Switzerland" },
-  { city: "Dhaka", line: "Gulshan Avenue 45, Dhaka 1212, Bangladesh" },
-  { city: "Singapore", line: "Marina Boulevard 8, Singapore 018981" },
+  { city: "Geneva", line: "Geneva, Switzerland" },
+  { city: "Dhaka", line: "Headquarters — Dhaka, Bangladesh" },
+  { city: "Singapore", line: "Singapore" },
 ];
 
 const SUBJECTS = [
