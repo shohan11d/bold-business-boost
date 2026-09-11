@@ -1,43 +1,25 @@
 import Button from "./Button";
-import GlowBackground from "./GlowBackground";
 import CountUp from "./CountUp";
+import GlobeVisual from "./GlobeVisual";
 
 const STATS = [
-  { value: "60+", label: "Countries" },
+  { value: "60+", label: "Countries served" },
   { value: "180", label: "Accredited labs" },
-  { value: "4,500", label: "Experts" },
+  { value: "4,500", label: "Experts worldwide" },
 ];
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-brand-blue">
-      <GlowBackground />
+    <section className="relative flex min-h-[calc(100svh-5rem)] overflow-hidden bg-brand-blue-deep">
+      <div className="pointer-events-none absolute inset-0 bg-grid opacity-35" aria-hidden="true" />
 
-      {/* large globe watermark */}
-      <div
-        className="pointer-events-none absolute inset-y-0 right-0 z-0 w-full opacity-[0.06] lg:w-2/3"
-        aria-hidden="true"
-      >
-        <img
-          src="/footer-globe.svg"
-          alt=""
-          className="h-full w-full object-contain object-right"
-        />
-      </div>
-
-      {/* diagonal accent */}
-      <div
-        className="pointer-events-none absolute top-0 right-0 z-0 h-full w-1/3 origin-top-right -skew-x-12 bg-brand-green-light/5"
-        aria-hidden="true"
-      />
-
-      <div className="relative z-10 mx-auto max-w-7xl px-5 py-20 lg:py-28">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-8">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col justify-center px-5 py-12 lg:py-16">
+        <div className="grid items-center gap-8 lg:grid-cols-[1.06fr_.94fr] lg:gap-12">
           <div className="max-w-2xl">
             <p className="eyebrow text-brand-green-light">
               Testing. Inspection. Certification
             </p>
-            <h1 className="mt-6 font-gotham text-5xl font-black uppercase leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-7xl">
+            <h1 className="mt-5 font-gotham text-4xl font-black uppercase leading-[0.95] text-white sm:text-6xl lg:text-7xl">
               The global
               <br />
               standard for
@@ -59,38 +41,22 @@ function Hero() {
             </div>
           </div>
 
-          {/* right-side visual block */}
           <div className="relative hidden lg:block">
-            <div className="relative aspect-square max-w-lg">
-              <div className="absolute inset-0 rounded-full border border-white/10" />
-              <div className="absolute inset-8 rounded-full border border-white/10" />
-              <div className="absolute inset-16 rounded-full border border-brand-green-light/20" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <p className="font-gotham text-8xl font-black text-white/90">
-                    TIC
-                  </p>
-                  <p className="mt-1 text-sm font-bold uppercase tracking-[0.3em] text-brand-green-light">
-                    Advisor
-                  </p>
-                </div>
-              </div>
-            </div>
+            <GlobeVisual />
           </div>
         </div>
 
-        {/* stats bar */}
-        <div className="mt-16 border-t-2 border-white/15 bg-white/5 backdrop-blur-sm lg:mt-20">
+        <div className="mt-10 border-y border-white/15 bg-white/5 lg:mt-12">
           <div className="grid grid-cols-3 divide-x divide-white/10">
             {STATS.map((stat) => (
               <div
                 key={stat.label}
-                className="flex flex-col items-center justify-center px-2 py-7 text-center sm:py-8"
+                className="flex min-h-28 flex-col items-center justify-center px-3 py-5 text-center sm:min-h-32"
               >
                 <p className="font-gotham text-3xl font-black text-white sm:text-4xl lg:text-5xl">
                   <CountUp value={stat.value} />
                 </p>
-                <p className="mt-1.5 text-[10px] font-bold uppercase tracking-widest text-brand-cyan-light sm:text-[11px]">
+                <p className="mt-2 max-w-36 text-[10px] font-bold uppercase tracking-widest text-brand-cyan-light sm:text-[11px]">
                   {stat.label}
                 </p>
               </div>

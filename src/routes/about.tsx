@@ -10,13 +10,13 @@ import CountUp from "../components/CountUp";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About TICAdvisor — Our Mission & Global Network" },
+      { title: "About TIC Advisor — Our Mission & Global Network" },
       {
         name: "description",
         content:
           "Who we are: a global testing, inspection and certification partner helping companies prove quality, safety and compliance.",
       },
-      { property: "og:title", content: "About TICAdvisor" },
+      { property: "og:title", content: "About TIC Advisor" },
       {
         property: "og:description",
         content:
@@ -79,7 +79,7 @@ function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About TICAdvisor"
+        eyebrow="About TIC Advisor"
         title="Trusted evidence for"
         highlight="critical decisions"
         description="We exist so that manufacturers, traders and regulators can rely on the same source of truth about quality, safety and compliance."
