@@ -10,7 +10,7 @@ import DecisionPlatform from "../components/DecisionPlatform";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "TICAdvisor — The Global Standard for Quality Assurance" },
+      { title: "TIC Advisor — Quality Assurance Worldwide" },
       {
         name: "description",
         content:
@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "TICAdvisor — The Global Standard for Quality Assurance",
+        content: "TIC Advisor — Quality Assurance Worldwide",
       },
       {
         property: "og:description",

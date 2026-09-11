@@ -23,15 +23,15 @@ const socialIcons = {
 
 const Footer = () => {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
-  const topPad = pathname === "/" ? "pt-80" : "pt-20";
+  const topPad = pathname === "/" ? "pt-24" : "pt-20";
   return (
-    <footer className={`relative ${topPad} bg-brand-blue font-gotham text-sm text-white overflow-hidden`}>
+    <footer className={`relative ${topPad} bg-brand-blue-deep font-gotham text-sm text-white overflow-hidden`}>
       <div className="pointer-events-none absolute inset-0 bg-[url('/footer-globe.svg')] bg-auto bg-no-repeat bg-position-[calc(100%+12rem)_bottom] opacity-20"></div>
       <div className="relative z-10 mx-auto max-w-[1100px]">
         <div className="grid justify-items-start grid-cols-2 md:grid-cols-4 px-5">
           {[0, 1, 2, 3].map((colIndex) => (
             <div key={colIndex} className="space-y-8">
-              {[footerLinks[colIndex * 2], footerLinks[colIndex * 2 + 1]].map(
+              {[footerLinks[colIndex]].map(
                 (section) => (
                   <div key={section.title}>
                     <h2 className="mt-5 mb-3 font-gotham text-sm font-semibold uppercase text-white">
@@ -48,10 +48,6 @@ const Footer = () => {
                           </a>
                         </li>
                       ))}
-                      {section.title === "INVESTORS" &&
-                        section.links.length === 0 && (
-                          <li className="h-4"></li> // Maintain spacing for empty lists
-                        )}
                     </ul>
                   </div>
                 ),
@@ -63,7 +59,7 @@ const Footer = () => {
           <span className="text-xs sm:text-center">
             © 2026{" "}
             <a href="/" className="hover:text-white">
-              TicAdvisor
+              TIC Advisor
             </a>
             . All Rights Reserved. | Privacy Policy | Terms of Use
           </span>

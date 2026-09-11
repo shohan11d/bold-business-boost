@@ -26,6 +26,7 @@
   --color-brand-green: #6bac00;
   --color-brand-green-light: #cbe869;
   --color-brand-blue: #004c72;
+  --color-brand-blue-deep: #00324d;
   --color-brand-blue-light: #0084ad;
   --color-brand-cyan: #00b7bf;
   --color-brand-cyan-light: #59efef;
@@ -104,6 +105,27 @@ body {
     linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
   background-size: 72px 72px;
+}
+
+@keyframes globe-drift {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes globe-pulse {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.75; transform: scale(1.7); }
+}
+
+.globe-grid {
+  transform-origin: center;
+  animation: globe-drift 42s linear infinite;
+}
+
+.globe-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: globe-pulse 2.4s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
