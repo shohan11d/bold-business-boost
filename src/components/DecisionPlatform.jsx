@@ -46,7 +46,6 @@ const DecisionPlatform = () => {
             </div>
           ))}
         </div>
-      </div>
         <CTASection />
       </div>
     </section>
