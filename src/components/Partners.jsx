@@ -1,72 +1,84 @@
-import GlowBackground from "./GlowBackground";
-import {
-  FaStripe,
-  FaSpotify,
-  FaTwitch,
-  FaApple,
-  FaAmazon,
-  FaGoogle,
-  FaWindows,
-  FaReact,
-  FaSalesforce,
-  FaSlack,
-  FaGitlab,
-  FaFigma,
-} from "react-icons/fa6";
-import { GoArrowRight } from "react-icons/go";
+import aciAsset from "../assets/client-logos/aci.svg.asset.json";
+import ajinomotoAsset from "../assets/client-logos/ajinomoto.svg.asset.json";
+import akijResourcesAsset from "../assets/client-logos/akij-resources.webp.asset.json";
+import akijVentureAsset from "../assets/client-logos/akij-venture.png.asset.json";
+import aquaPaintAsset from "../assets/client-logos/aqua-paint.png.asset.json";
+import bauAsset from "../assets/client-logos/bau.png.asset.json";
+import bombaySweetsAsset from "../assets/client-logos/bombay-sweets.png.asset.json";
+import dxnAsset from "../assets/client-logos/dxn.png.asset.json";
+import eliteSteelAsset from "../assets/client-logos/elite-steel.png.asset.json";
+import gemconAsset from "../assets/client-logos/gemcon.png.asset.json";
+import icddrbAsset from "../assets/client-logos/icddrb.png.asset.json";
+import kishwanAsset from "../assets/client-logos/kishwan.png.asset.json";
+import newZealandDairyAsset from "../assets/client-logos/new-zealand-dairy.png.asset.json";
+import ovijatAsset from "../assets/client-logos/ovijat.png.asset.json";
+import pranAsset from "../assets/client-logos/pran.png.asset.json";
+import reveAsset from "../assets/client-logos/reve-group.png.asset.json";
+import sauAsset from "../assets/client-logos/sau.png.asset.json";
+import senaKalyanAsset from "../assets/client-logos/sena-kalyan.svg.asset.json";
+import unitedGroupAsset from "../assets/client-logos/united-group.svg.asset.json";
 
-const partnersData = [
-  { name: "Stripe", icon: FaStripe, since: "2015" },
-  { name: "Spotify", icon: FaSpotify, since: "2015" },
-  { name: "Apple", icon: FaApple, since: "2016" },
-  { name: "Twitch", icon: FaTwitch, since: "2015" },
-  { name: "Amazon", icon: FaAmazon, since: "2017" },
-  { name: "Google", icon: FaGoogle, since: "2015" },
-  { name: "Microsoft", icon: FaWindows, since: "2018" },
-  { name: "React", icon: FaReact, since: "2015" },
-  { name: "Salesforce", icon: FaSalesforce, since: "2019" },
-  { name: "Slack", icon: FaSlack, since: "2020" },
-  { name: "GitLab", icon: FaGitlab, since: "2021" },
-  { name: "Figma", icon: FaFigma, since: "2022" },
+const clients = [
+  { name: "Shajib Brother GP" },
+  { name: "icddr,b", logo: icddrbAsset.url },
+  { name: "PRAN", logo: pranAsset.url },
+  { name: "Akij Venture", logo: akijVentureAsset.url },
+  { name: "Akij INSAF" },
+  { name: "Akij Resources", logo: akijResourcesAsset.url },
+  { name: "Meghna Group" },
+  { name: "Care Nutrition" },
+  { name: "ACI", logo: aciAsset.url },
+  { name: "Gemcon Group", logo: gemconAsset.url },
+  { name: "Sher-e-Bangla Agricultural University", logo: sauAsset.url },
+  { name: "Banoful Kishwan Group", logo: kishwanAsset.url },
+  { name: "United Group", logo: unitedGroupAsset.url, invert: true },
+  { name: "DXN", logo: dxnAsset.url },
+  { name: "Sena Kalyan Constructions & Developments", logo: senaKalyanAsset.url },
+  { name: "Elite Steel", logo: eliteSteelAsset.url },
+  { name: "Aqua Paint", logo: aquaPaintAsset.url },
+  { name: "Reve Group", logo: reveAsset.url },
+  { name: "Ajinomoto", logo: ajinomotoAsset.url },
+  { name: "Bombay Sweets & Co. Ltd.", logo: bombaySweetsAsset.url },
+  { name: "Ovijat Food & Beverage Industries Ltd.", logo: ovijatAsset.url },
+  { name: "Bangladesh Agricultural University", logo: bauAsset.url },
+  { name: "New Zealand Dairy", logo: newZealandDairyAsset.url },
 ];
 
 const Partners = () => {
   return (
-    <section className="relative overflow-hidden bg-brand-blue px-5 py-20 text-white lg:py-28">
-      <GlowBackground />
-      <div className="custom-container relative z-10">
-        <div className="flex flex-col gap-6 border-l-8 border-brand-cyan-light pl-6 md:flex-row md:items-end md:justify-between md:pl-10">
+    <section className="bg-brand-blue-deep px-5 py-20 text-white lg:py-28">
+      <div className="custom-container">
+        <div className="border-l-8 border-brand-cyan-light pl-6 md:pl-10">
           <div className="max-w-2xl">
-            <p className="eyebrow text-brand-cyan-light">Trusted by</p>
+            <p className="eyebrow text-brand-cyan-light">Selected clients</p>
             <h2 className="mt-4 font-gotham text-4xl font-black uppercase leading-[0.95] tracking-tight lg:text-6xl">
-              Our key partners
+              Companies we have worked with
             </h2>
             <p className="mt-5 text-sm leading-relaxed text-white/80 lg:text-base">
-              We focus on markets where safety, quality and compliance unlock
-              long-term value.
+              Supporting organizations across food, healthcare, agriculture,
+              manufacturing and construction.
             </p>
           </div>
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 border-b-2 border-brand-green-light pb-1 text-sm font-black uppercase tracking-widest text-brand-green-light"
-          >
-            Become a partner <GoArrowRight />
-          </a>
         </div>
 
-        <div className="mt-14 grid grid-cols-2 gap-px bg-white/15 sm:grid-cols-3 md:grid-cols-4">
-          {partnersData.map(({ name, icon: Icon, since }) => (
+        <div className="mt-14 grid grid-cols-2 gap-px bg-white/20 sm:grid-cols-3 lg:grid-cols-4">
+          {clients.map(({ name, logo, invert }) => (
             <div
               key={name}
-              className="flex flex-col items-center gap-3 bg-brand-blue px-4 py-10 hover:bg-brand-blue-light"
+              className="flex min-h-36 items-center justify-center bg-white px-5 py-7 text-center sm:min-h-40"
             >
-              <Icon className="h-10 w-10 text-white" />
-              <p className="font-gotham text-sm font-black uppercase tracking-wide">
-                {name}
-              </p>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-brand-cyan-light">
-                Partner since {since}
-              </p>
+              {logo ? (
+                <img
+                  src={logo}
+                  alt={`${name} logo`}
+                  loading="lazy"
+                  className={`max-h-20 w-auto max-w-full object-contain ${invert ? "rounded-sm bg-brand-blue-deep p-3" : ""}`}
+                />
+              ) : (
+                <p className="max-w-52 font-gotham text-sm font-black uppercase leading-snug text-brand-blue md:text-base">
+                  {name}
+                </p>
+              )}
             </div>
           ))}
         </div>

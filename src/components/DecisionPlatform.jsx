@@ -5,8 +5,8 @@ import cards from "../data/platformCards.json";
 
 const DecisionPlatform = () => {
   return (
-    <section className="relative z-20 bg-white px-5 py-20 text-gray-900 lg:py-28">
-      <div className="custom-container pb-24 md:pb-32 lg:pb-44">
+    <section className="bg-white px-5 py-20 text-gray-900 lg:py-28">
+      <div className="custom-container">
         <div className="max-w-4xl border-l-8 border-brand-blue pl-6 md:pl-10">
           <h2 className="font-gotham text-4xl font-black uppercase leading-[0.95] tracking-tight text-brand-blue md:text-6xl">
             Testing. Inspection.
@@ -22,7 +22,7 @@ const DecisionPlatform = () => {
             increases.
           </p>
           <p className="text-base leading-relaxed text-gray-600 md:text-lg">
-            TicAdvisor combines powerful testing, inspection and certification
+            TIC Advisor combines powerful testing, inspection and certification
             capabilities into a single trusted partnership, providing the
             critical insights needed to make decisions with confidence.
           </p>
@@ -47,7 +47,8 @@ const DecisionPlatform = () => {
           ))}
         </div>
       </div>
-      <CTASection />
+        <CTASection />
+      </div>
     </section>
   );
 };
