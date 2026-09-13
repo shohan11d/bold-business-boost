@@ -63,18 +63,19 @@ const Partners = () => {
           </div>
         </div>
 
-        <div className="mt-14 grid grid-cols-2 gap-px bg-white/20 sm:grid-cols-3 lg:grid-cols-4">
+        <div className="mt-14 flex flex-wrap items-center justify-center gap-3 md:gap-4">
           {clients.map(({ name, logo, invert, logoClass }) => (
             <div
               key={name}
-              className="flex min-h-36 items-center justify-center bg-white px-5 py-7 text-center sm:min-h-40"
+              className="group relative flex h-28 w-[calc(50%-0.375rem)] items-center justify-center overflow-hidden rounded-lg border border-white/15 bg-white/95 px-5 py-5 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-cyan-light/60 hover:bg-white sm:h-32 sm:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-0.75rem)]"
             >
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-brand-cyan transition-transform duration-300 group-hover:scale-x-100" />
               {logo ? (
                 <img
                   src={logo}
                   alt={`${name} logo`}
                   loading="lazy"
-                  className={`max-h-20 w-auto max-w-full object-contain ${logoClass ?? ""} ${invert ? "rounded-sm bg-brand-blue-deep p-3" : ""}`}
+                  className={`relative max-h-16 w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.03] sm:max-h-20 ${logoClass ?? ""} ${invert ? "rounded-sm bg-brand-blue-deep p-2" : ""}`}
                 />
               ) : (
                 <p className="max-w-52 font-gotham text-sm font-black uppercase leading-snug text-brand-blue md:text-base">
