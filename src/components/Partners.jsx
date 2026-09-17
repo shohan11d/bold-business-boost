@@ -24,26 +24,26 @@ import unitedGroupAsset from "../assets/client-logos/united-group.svg.asset.json
 const clients = [
   { name: "icddr,b", logo: icddrbAsset.url, logoClass: "max-h-16" },
   { name: "PRAN", logo: pranAsset.url, logoClass: "max-h-24" },
-  { name: "Akij Venture", logo: akijVentureAsset.url },
-  { name: "Akij INSAF", logo: akijInsafAsset.url, logoClass: "max-h-24" },
+  { name: "Akij Venture", logo: akijVentureAsset.url, logoClass: "max-h-14 max-w-[78%] sm:max-h-16" },
+  { name: "Akij INSAF", logo: akijInsafAsset.url, logoClass: "max-h-24 scale-110 sm:max-h-24" },
   { name: "Akij Resources", logo: akijResourcesAsset.url },
   { name: "Meghna Group", logo: meghnaGroupAsset.url, logoClass: "max-h-24" },
   { name: "Care Nutrition", logo: careNutritionAsset.url, logoClass: "max-h-16" },
   { name: "ACI", logo: aciAsset.url, logoClass: "max-h-24" },
-  { name: "Gemcon Group", logo: gemconAsset.url },
-  { name: "Sher-e-Bangla Agricultural University", logo: sauAsset.url },
+  { name: "Gemcon Group", logo: gemconAsset.url, logoClass: "max-h-24 scale-110 sm:max-h-24" },
+  { name: "Sher-e-Bangla Agricultural University", logo: sauAsset.url, logoClass: "max-h-24 scale-110 sm:max-h-24" },
   { name: "Banoful Kishwan Group", logo: kishwanAsset.url },
   { name: "United Group", logo: unitedGroupAsset.url, invert: true },
   { name: "DXN", logo: dxnAsset.url },
   { name: "Sena Kalyan Constructions & Developments", logo: senaKalyanAsset.url },
   { name: "Elite Steel", logo: eliteSteelAsset.url },
   { name: "Aqua Paint", logo: aquaPaintAsset.url },
-  { name: "Reve Group", logo: reveAsset.url },
+  { name: "Reve Group", logo: reveAsset.url, logoClass: "max-h-24 max-w-[88%] sm:max-h-24" },
   { name: "Ajinomoto", logo: ajinomotoAsset.url },
   { name: "Bombay Sweets & Co. Ltd.", logo: bombaySweetsAsset.url },
   { name: "Ovijat Food & Beverage Industries Ltd.", logo: ovijatAsset.url },
-  { name: "Bangladesh Agricultural University", logo: bauAsset.url },
-  { name: "New Zealand Dairy", logo: newZealandDairyAsset.url, logoClass: "max-h-24 scale-125" },
+  { name: "Bangladesh Agricultural University", logo: bauAsset.url, logoClass: "max-h-24 scale-110 sm:max-h-24" },
+  { name: "New Zealand Dairy", logo: newZealandDairyAsset.url, logoClass: "max-h-20 w-full max-w-[94%] brightness-0 invert sm:max-h-20" },
 ];
 
 const Partners = () => {
@@ -67,7 +67,7 @@ const Partners = () => {
           {clients.map(({ name, logo, invert, logoClass }) => (
             <div
               key={name}
-              className="group relative flex h-28 w-[calc(50%-0.375rem)] items-center justify-center overflow-hidden rounded-lg border border-white/15 bg-white/95 px-5 py-5 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-cyan-light/60 hover:bg-white sm:h-32 sm:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-0.75rem)]"
+              className="group relative flex h-28 w-[calc(50%-0.375rem)] items-center justify-center overflow-hidden rounded-lg border border-white/15 bg-white/5 px-5 py-5 text-center transition duration-300 hover:-translate-y-1 hover:border-brand-cyan-light/60 hover:bg-white/10 sm:h-32 sm:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-0.75rem)]"
             >
               <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-brand-cyan transition-transform duration-300 group-hover:scale-x-100" />
               {logo ? (
@@ -75,7 +75,7 @@ const Partners = () => {
                   src={logo}
                   alt={`${name} logo`}
                   loading="lazy"
-                  className={`relative max-h-16 w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.03] sm:max-h-20 ${logoClass ?? ""} ${invert ? "rounded-sm bg-brand-blue-deep p-2" : ""}`}
+                  className={`relative max-h-16 w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.03] sm:max-h-20 ${logoClass ?? ""} ${invert ? "p-2" : ""}`}
                 />
               ) : (
                 <p className="max-w-52 font-gotham text-sm font-black uppercase leading-snug text-brand-blue md:text-base">
