@@ -15,7 +15,7 @@ import kishwanAsset from "../assets/client-logos/kishwan.png.asset.json";
 import meghnaGroupAsset from "../assets/client-logos/meghna-group-official.webp.asset.json";
 import newZealandDairyAsset from "../assets/client-logos/new-zealand-dairy.png.asset.json";
 import ovijatAsset from "../assets/client-logos/ovijat.png.asset.json";
-import pranAsset from "../assets/client-logos/pran-taste-of-life.jpg.asset.json";
+import pranAsset from "../assets/client-logos/pran-taste-of-life-transparent.png.asset.json";
 import reveAsset from "../assets/client-logos/reve-group.png.asset.json";
 import sauAsset from "../assets/client-logos/sau.png.asset.json";
 import senaKalyanAsset from "../assets/client-logos/sena-kalyan.svg.asset.json";
