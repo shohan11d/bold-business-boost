@@ -1,21 +1,21 @@
-import aciAsset from "../assets/client-logos/aci-group-logo-png_seeklogo-342185_1.png.asset.json";
+import aciAsset from "../assets/client-logos/aci-transparent.png.asset.json";
 import ajinomotoAsset from "../assets/client-logos/ajinomoto.svg.asset.json";
 import akijInsafAsset from "../assets/client-logos/akij-insaf.jpg.asset.json";
 import akijResourcesAsset from "../assets/client-logos/akij-resources.webp.asset.json";
-import akijVentureAsset from "../assets/client-logos/akij-venture.png.asset.json";
+import akijVentureAsset from "../assets/client-logos/akij-venture-official.png.asset.json";
 import aquaPaintAsset from "../assets/client-logos/aqua-paint.png.asset.json";
 import bauAsset from "../assets/client-logos/bau.png.asset.json";
 import bombaySweetsAsset from "../assets/client-logos/bombay-sweets.png.asset.json";
 import dxnAsset from "../assets/client-logos/dxn.png.asset.json";
 import eliteSteelAsset from "../assets/client-logos/elite-steel.png.asset.json";
-import gemconAsset from "../assets/client-logos/gemcon.png.asset.json";
+import gemconAsset from "../assets/client-logos/gemcon-group.avif.asset.json";
 import careNutritionAsset from "../assets/client-logos/care-nutrition.webp.asset.json";
 import icddrbAsset from "../assets/client-logos/icddrb-Logo-Vector.svg-.png.asset.json";
 import kishwanAsset from "../assets/client-logos/kishwan.png.asset.json";
-import meghnaGroupAsset from "../assets/client-logos/meghna-group.webp.asset.json";
+import meghnaGroupAsset from "../assets/client-logos/meghna-group-official.webp.asset.json";
 import newZealandDairyAsset from "../assets/client-logos/new-zealand-dairy.png.asset.json";
 import ovijatAsset from "../assets/client-logos/ovijat.png.asset.json";
-import pranAsset from "../assets/client-logos/pran-logo-png_seeklogo-258211.png.asset.json";
+import pranAsset from "../assets/client-logos/pran-taste-of-life.jpg.asset.json";
 import reveAsset from "../assets/client-logos/reve-group.png.asset.json";
 import sauAsset from "../assets/client-logos/sau.png.asset.json";
 import senaKalyanAsset from "../assets/client-logos/sena-kalyan.svg.asset.json";
@@ -24,12 +24,12 @@ import unitedGroupAsset from "../assets/client-logos/united-group.svg.asset.json
 const clients = [
   { name: "icddr,b", logo: icddrbAsset.url, logoClass: "max-h-16" },
   { name: "PRAN", logo: pranAsset.url, logoClass: "max-h-24" },
-  { name: "Akij Venture", logo: akijVentureAsset.url, logoClass: "max-h-14 max-w-[78%] sm:max-h-16" },
+  { name: "Akij Venture", logo: akijVentureAsset.url, logoClass: "max-h-14 max-w-[82%] sm:max-h-16" },
   { name: "Akij INSAF", logo: akijInsafAsset.url, logoClass: "max-h-24 scale-110 sm:max-h-24" },
   { name: "Akij Resources", logo: akijResourcesAsset.url },
-  { name: "Meghna Group", logo: meghnaGroupAsset.url, logoClass: "max-h-24" },
+  { name: "Meghna Group", logo: meghnaGroupAsset.url, logoClass: "max-h-20 max-w-[88%] sm:max-h-24" },
   { name: "Care Nutrition", logo: careNutritionAsset.url, logoClass: "max-h-16" },
-  { name: "ACI", logo: aciAsset.url, logoClass: "max-h-24" },
+  { name: "ACI", logo: aciAsset.url, logoClass: "max-h-20 sm:max-h-24" },
   { name: "Gemcon Group", logo: gemconAsset.url, logoClass: "max-h-24 scale-110 sm:max-h-24" },
   { name: "Sher-e-Bangla Agricultural University", logo: sauAsset.url, logoClass: "max-h-24 scale-110 sm:max-h-24" },
   { name: "Banoful Kishwan Group", logo: kishwanAsset.url },
