@@ -43,7 +43,7 @@ const clients = [
   { name: "Bombay Sweets & Co. Ltd.", logo: bombaySweetsAsset.url },
   { name: "Ovijat Food & Beverage Industries Ltd.", logo: ovijatAsset.url },
   { name: "Bangladesh Agricultural University", logo: bauAsset.url, logoClass: "max-h-24 scale-110 sm:max-h-24" },
-  { name: "New Zealand Dairy", logo: newZealandDairyAsset.url, logoClass: "max-h-20 w-full max-w-[92%] sm:max-h-20" },
+  { name: "New Zealand Dairy", logo: newZealandDairyAsset.url, logoClass: "max-h-20 w-full max-w-[94%] brightness-0 invert sm:max-h-20" },
 ];
 
 const Partners = () => {
