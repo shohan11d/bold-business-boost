@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep the Services overview at `/services` and place each core service in a separate leaf page under `/services/`; use a shared data-driven detail template so service pages stay consistent.

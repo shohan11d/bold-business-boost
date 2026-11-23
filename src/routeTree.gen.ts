@@ -14,6 +14,10 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as ServicesCertificationRouteImport } from './routes/services_.certification'
+import { Route as ServicesInspectionRouteImport } from './routes/services_.inspection'
+import { Route as ServicesTestingRouteImport } from './routes/services_.testing'
+import { Route as ServicesTrainingRouteImport } from './routes/services_.training'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -40,6 +44,26 @@ const ServicesRoute = ServicesRouteImport.update({
   path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesCertificationRoute = ServicesCertificationRouteImport.update({
+  id: '/services_/certification',
+  path: '/services/certification',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesInspectionRoute = ServicesInspectionRouteImport.update({
+  id: '/services_/inspection',
+  path: '/services/inspection',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesTestingRoute = ServicesTestingRouteImport.update({
+  id: '/services_/testing',
+  path: '/services/testing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesTrainingRoute = ServicesTrainingRouteImport.update({
+  id: '/services_/training',
+  path: '/services/training',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -47,6 +71,10 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/events': typeof EventsRoute
   '/services': typeof ServicesRoute
+  '/services/certification': typeof ServicesCertificationRoute
+  '/services/inspection': typeof ServicesInspectionRoute
+  '/services/testing': typeof ServicesTestingRoute
+  '/services/training': typeof ServicesTrainingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +82,10 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/events': typeof EventsRoute
   '/services': typeof ServicesRoute
+  '/services/certification': typeof ServicesCertificationRoute
+  '/services/inspection': typeof ServicesInspectionRoute
+  '/services/testing': typeof ServicesTestingRoute
+  '/services/training': typeof ServicesTrainingRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,13 +94,45 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/events': typeof EventsRoute
   '/services': typeof ServicesRoute
+  '/services_/certification': typeof ServicesCertificationRoute
+  '/services_/inspection': typeof ServicesInspectionRoute
+  '/services_/testing': typeof ServicesTestingRoute
+  '/services_/training': typeof ServicesTrainingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/contact' | '/events' | '/services'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/events'
+    | '/services'
+    | '/services/certification'
+    | '/services/inspection'
+    | '/services/testing'
+    | '/services/training'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/events' | '/services'
-  id: '__root__' | '/' | '/about' | '/contact' | '/events' | '/services'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/events'
+    | '/services'
+    | '/services/certification'
+    | '/services/inspection'
+    | '/services/testing'
+    | '/services/training'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/events'
+    | '/services'
+    | '/services_/certification'
+    | '/services_/inspection'
+    | '/services_/testing'
+    | '/services_/training'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -77,6 +141,10 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   EventsRoute: typeof EventsRoute
   ServicesRoute: typeof ServicesRoute
+  ServicesCertificationRoute: typeof ServicesCertificationRoute
+  ServicesInspectionRoute: typeof ServicesInspectionRoute
+  ServicesTestingRoute: typeof ServicesTestingRoute
+  ServicesTrainingRoute: typeof ServicesTrainingRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -116,6 +184,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services_/certification': {
+      id: '/services_/certification'
+      path: '/services/certification'
+      fullPath: '/services/certification'
+      preLoaderRoute: typeof ServicesCertificationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services_/inspection': {
+      id: '/services_/inspection'
+      path: '/services/inspection'
+      fullPath: '/services/inspection'
+      preLoaderRoute: typeof ServicesInspectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services_/testing': {
+      id: '/services_/testing'
+      path: '/services/testing'
+      fullPath: '/services/testing'
+      preLoaderRoute: typeof ServicesTestingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services_/training': {
+      id: '/services_/training'
+      path: '/services/training'
+      fullPath: '/services/training'
+      preLoaderRoute: typeof ServicesTrainingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -125,6 +221,10 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   EventsRoute: EventsRoute,
   ServicesRoute: ServicesRoute,
+  ServicesCertificationRoute: ServicesCertificationRoute,
+  ServicesInspectionRoute: ServicesInspectionRoute,
+  ServicesTestingRoute: ServicesTestingRoute,
+  ServicesTrainingRoute: ServicesTrainingRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
