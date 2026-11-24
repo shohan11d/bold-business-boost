@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import Button from "./Button";
 import CountUp from "./CountUp";
 import GlobeVisual from "./GlobeVisual";
@@ -10,7 +11,7 @@ const STATS = [
 
 function Hero() {
   return (
-    <section className="relative flex min-h-[calc(100svh-5rem)] overflow-hidden bg-brand-blue-deep">
+    <section className="relative flex min-h-[calc(100svh-5rem)] overflow-hidden bg-gradient-to-br from-brand-blue-deep via-brand-blue to-brand-blue-deep">
       <div className="pointer-events-none absolute inset-0 bg-grid opacity-35" aria-hidden="true" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col justify-center px-5 py-12 lg:py-16">
@@ -19,7 +20,7 @@ function Hero() {
             <p className="eyebrow text-brand-green-light">
               Testing. Inspection. Certification
             </p>
-            <h1 className="mt-5 font-gotham text-4xl font-black uppercase leading-[0.95] text-white sm:text-6xl lg:text-7xl">
+            <h1 className="mt-5 font-gotham text-4xl font-black uppercase leading-[0.97] text-white sm:text-5xl lg:text-[3.25rem] 2xl:text-7xl">
               The global
               <br />
               standard for
@@ -29,15 +30,19 @@ function Hero() {
             <div className="mt-8 max-w-xl border-l-4 border-brand-green-light pl-5">
               <p className="text-base leading-relaxed text-white/85 lg:text-lg">
                 Protect your brand and secure your entire supply chain.
-                TICAdvisor delivers expert testing, inspection and certification
+                TIC Advisor delivers expert testing, inspection and certification
                 services built for the most rigorous international standards.
               </p>
             </div>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Button className="px-8 py-4 text-sm">Talk to an expert</Button>
-              <Button variant="outline" className="px-8 py-4 text-sm">
-                Explore services
-              </Button>
+              <Link to="/contact">
+                <Button className="px-8 py-4 text-sm">Talk to an expert</Button>
+              </Link>
+              <Link to="/services">
+                <Button variant="outline" className="px-8 py-4 text-sm">
+                  Explore services
+                </Button>
+              </Link>
             </div>
           </div>
 

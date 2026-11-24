@@ -4,15 +4,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* custom font gotham */
-@font-face {
-  font-family: "gotham";
-  src: url("/fonts/gotham-book.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 @theme {
   /* Colors */
   --color-background: #ffffff;
@@ -32,15 +23,16 @@
   --color-brand-cyan-light: #59efef;
 
   /* Fonts */
-  --font-gotham: "Montserrat", ui-sans-serif, system-ui, sans-serif;
-  --font-monsterrat: "Montserrat", ui-sans-serif, system-ui, sans-serif;
-  --font-open-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-gotham: Arial, Helvetica, sans-serif;
+  --font-monsterrat: Arial, Helvetica, sans-serif;
+  --font-open-sans: Arial, Helvetica, sans-serif;
 
   --shadow-card: 0 24px 48px -18px rgba(0, 30, 50, 0.45);
 }
 
 body {
-  font-family: var(--font-monsterrat);
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #ffffff;
   color: #0f172a;
 }
@@ -69,28 +61,29 @@ body {
     radial-gradient(at 0% 100%, rgba(203, 232, 105, 0.1) 0px, transparent 50%);
 }
 
-/* Animations removed for performance. These utilities are kept as no-ops so
-   any remaining references stay harmless. */
 @utility animate-fade-in-up {
-  animation: none;
+  animation: page-fade-up 560ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 @utility animate-slide-in-left {
-  animation: none;
+  animation: page-slide-left 560ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 @utility animate-slide-in-right {
-  animation: none;
+  animation: page-slide-right 560ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 @utility animate-text-cycle {
-  animation: none;
+  animation: page-fade-up 560ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+@utility delay-0 {
+  animation-delay: 0ms;
 }
 @utility delay-100 {
-  animation-delay: 0ms;
+  animation-delay: 100ms;
 }
 @utility delay-200 {
-  animation-delay: 0ms;
+  animation-delay: 200ms;
 }
 @utility delay-300 {
-  animation-delay: 0ms;
+  animation-delay: 300ms;
 }
 
 @utility eyebrow {
@@ -113,19 +106,32 @@ body {
 }
 
 @keyframes globe-pulse {
-  0%, 100% { opacity: 0.2; transform: scale(1); }
-  50% { opacity: 0.75; transform: scale(1.7); }
+  0%, 100% { opacity: 0.18; }
+  50% { opacity: 0.62; }
+}
+
+@keyframes page-fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes page-slide-left {
+  from { opacity: 0; transform: translateX(16px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes page-slide-right {
+  from { opacity: 0; transform: translateX(-16px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 .globe-grid {
   transform-origin: center;
-  animation: globe-drift 42s linear infinite;
+  animation: globe-drift 84s linear infinite;
 }
 
 .globe-pulse {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: globe-pulse 2.4s ease-in-out infinite;
+  animation: globe-pulse 3.6s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

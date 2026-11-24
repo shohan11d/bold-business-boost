@@ -79,11 +79,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "TICAdvisor — Testing, Inspection & Certification" },
+      { title: "TIC Advisor — Testing, Inspection & Certification" },
       {
         name: "description",
         content:
-          "TICAdvisor delivers expert testing, inspection and certification services for global supply chains.",
+          "TIC Advisor delivers expert testing, inspection and certification services for global supply chains.",
       },
       { name: "author", content: "TICAdvisor" },
       { property: "og:type", content: "website" },
@@ -91,12 +91,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap",
-      },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
   }),

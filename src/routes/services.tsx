@@ -8,6 +8,7 @@ import {
   MdOutlineInventory2,
 } from "react-icons/md";
 import { GoArrowRight } from "react-icons/go";
+import { BadgeCheck, FlaskConical, GraduationCap, ScanSearch } from "lucide-react";
 
 import PageHero from "../components/PageHero";
 import ServicesSection from "../components/ServicesSection";
@@ -17,18 +18,20 @@ import Button from "../components/Button";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Testing, Inspection & Certification | TICAdvisor" },
+      { title: "Services — Testing, Inspection & Certification | TIC Advisor" },
       {
         name: "description",
         content:
-          "Laboratory testing, field inspection, product certification, auditing, consulting and training services from TICAdvisor.",
+          "Laboratory testing, field inspection, product certification, auditing, consulting and training services from TIC Advisor.",
       },
-      { property: "og:title", content: "Services | TICAdvisor" },
+      { property: "og:title", content: "Services | TIC Advisor" },
       {
         property: "og:description",
         content:
-          "Laboratory testing, field inspection, product certification, auditing, consulting and training services from TICAdvisor.",
+          "Laboratory testing, field inspection, product certification, auditing, consulting and training services from TIC Advisor.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: ServicesPage,
@@ -96,6 +99,33 @@ const PROCESS = [
   },
 ];
 
+const SERVICE_LINES = [
+  {
+    title: "Testing",
+    path: "/services/testing",
+    description: "Laboratory analysis for quality, composition and compliance questions.",
+    Icon: FlaskConical,
+  },
+  {
+    title: "Inspection",
+    path: "/services/inspection",
+    description: "Independent checks of suppliers, sites, products and shipments.",
+    Icon: ScanSearch,
+  },
+  {
+    title: "Certification",
+    path: "/services/certification",
+    description: "Assessment routes for products, processes and management systems.",
+    Icon: BadgeCheck,
+  },
+  {
+    title: "Training",
+    path: "/services/training",
+    description: "Practical learning to strengthen your team's quality practices.",
+    Icon: GraduationCap,
+  },
+];
+
 function ServicesPage() {
   return (
     <>
@@ -105,6 +135,39 @@ function ServicesPage() {
         highlight="regulated markets"
         description="From a single laboratory analysis to a global assurance programme, TICAdvisor gives you the evidence you need to ship with confidence."
       />
+
+      <section className="px-5 py-14 lg:py-20">
+        <div className="custom-container">
+          <FadeInUp>
+            <p className="eyebrow text-brand-blue-light">Explore by service</p>
+            <h2 className="mt-4 max-w-3xl font-gotham text-3xl font-black uppercase leading-tight text-brand-blue lg:text-5xl">
+              Four disciplines. One clear view.
+            </h2>
+          </FadeInUp>
+          <div className="mt-9 grid gap-px bg-gray-200 sm:grid-cols-2 lg:grid-cols-4">
+            {SERVICE_LINES.map(({ title, path, description, Icon }, idx) => (
+              <FadeInUp key={title} delay={`delay-${idx * 100}`}>
+                <Link
+                  to={path}
+                  aria-label={`Explore ${title} services`}
+                  className="group flex h-full flex-col bg-white p-6 transition-colors duration-300 hover:bg-brand-blue/5 focus-visible:outline-2 focus-visible:outline-brand-cyan"
+                >
+                  <Icon className="h-8 w-8 text-brand-blue-light transition-transform duration-300 group-hover:-translate-y-0.5" strokeWidth={1.7} />
+                  <h3 className="mt-6 font-gotham text-lg font-black uppercase text-brand-blue">
+                    {title}
+                  </h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-gray-600">
+                    {description}
+                  </p>
+                  <span className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase text-brand-blue">
+                    Learn more <GoArrowRight />
+                  </span>
+                </Link>
+              </FadeInUp>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="px-5 py-16 lg:py-24">
         <div className="custom-container">

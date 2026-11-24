@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MdOutlinePublic, MdOutlineShield, MdOutlineHandshake } from "react-icons/md";
+import { ArrowUpRight } from "lucide-react";
 
 import PageHero from "../components/PageHero";
 import FadeInUp from "../components/FadeInUp";
@@ -22,6 +23,8 @@ export const Route = createFileRoute("/about")({
         content:
           "Who we are: a global testing, inspection and certification partner helping companies prove quality, safety and compliance.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: AboutPage,
@@ -73,6 +76,13 @@ const MILESTONES = [
     year: "2026",
     text: "Serving clients across six continents with sustainability verification at the core.",
   },
+];
+
+const SERVICE_LINES = [
+  { title: "Testing", path: "/services/testing", text: "Analytical evidence for product quality and compliance decisions." },
+  { title: "Inspection", path: "/services/inspection", text: "Independent observations at facilities and across shipment stages." },
+  { title: "Certification", path: "/services/certification", text: "Assessment against defined product, process and system requirements." },
+  { title: "Training", path: "/services/training", text: "Practical learning for teams working with quality and standards." },
 ];
 
 function AboutPage() {
@@ -158,6 +168,35 @@ function AboutPage() {
                 </FadeInUp>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 px-5 py-16 lg:py-24">
+        <div className="custom-container">
+          <FadeInUp>
+            <p className="eyebrow text-brand-blue-light">Our expertise</p>
+            <h2 className="mt-4 max-w-3xl font-gotham text-3xl font-black uppercase leading-tight text-brand-blue lg:text-5xl">
+              Four ways to strengthen confidence
+            </h2>
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-gray-600">
+              Bring testing, inspection, certification and training together around the needs of your products and supply chain.
+            </p>
+          </FadeInUp>
+          <div className="mt-9 grid gap-px bg-gray-200 sm:grid-cols-2 lg:grid-cols-4">
+            {SERVICE_LINES.map((item, idx) => (
+              <FadeInUp key={item.title} delay={`delay-${idx * 100}`}>
+                <Link
+                  to={item.path}
+                  className="group flex h-full flex-col bg-white p-6 transition-colors duration-300 hover:bg-brand-blue/5"
+                >
+                  <span className="font-gotham text-xs font-black text-brand-blue-light">0{idx + 1}</span>
+                  <h3 className="mt-5 font-gotham text-lg font-black uppercase text-brand-blue">{item.title}</h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-gray-600">{item.text}</p>
+                  <ArrowUpRight className="mt-5 h-5 w-5 text-brand-blue-light transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
+                </Link>
+              </FadeInUp>
+            ))}
           </div>
         </div>
       </section>

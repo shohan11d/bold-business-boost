@@ -1,63 +1,63 @@
 import GlowBackground from "./GlowBackground";
 import {
-  MdOutlineFastfood,
-  MdOutlineAgriculture,
-  MdOutlineLocalShipping,
-  MdOutlineShoppingBag,
-  MdOutlineMedicalServices,
-  MdOutlineSecurity,
-  MdOutlineAssignment,
-  MdOutlinePublic,
-} from "react-icons/md";
+  Apple,
+  Sprout,
+  Boxes,
+  ShoppingBag,
+  Pill,
+  BadgeCheck,
+  ClipboardCheck,
+  Leaf,
+} from "lucide-react";
 
 const SERVICES = [
   {
     title: "Food",
     description:
       "Safeguard food safety with advanced analytical services, efficient solutions, crisis management and fast turnaround.",
-    Icon: MdOutlineFastfood,
+    Icon: Apple,
   },
   {
     title: "Agriculture",
     description:
       "Mitigate risk, ensure compliance and boost transparency with tailored agricultural testing, inspection and certification.",
-    Icon: MdOutlineAgriculture,
+    Icon: Sprout,
   },
   {
     title: "Minerals & Metals",
     description:
       "From exploration to recycling: inspection, sampling, testing and certification services across the value chain.",
-    Icon: MdOutlineLocalShipping,
+    Icon: Boxes,
   },
   {
     title: "Consumer Products",
     description:
       "With our expert network, ensure your products meet specifications, quality standards and regulatory requirements.",
-    Icon: MdOutlineShoppingBag,
+    Icon: ShoppingBag,
   },
   {
     title: "Pharmaceutical",
     description:
       "Advanced pharmaceutical testing services to evaluate potency, dosage and quality for safe, effective products.",
-    Icon: MdOutlineMedicalServices,
+    Icon: Pill,
   },
   {
     title: "Certification",
     description:
       "Certification, verification and audit services that help organisations demonstrate they meet key standards.",
-    Icon: MdOutlineSecurity,
+    Icon: BadgeCheck,
   },
   {
     title: "Verification of Conformity",
     description:
       "Ensure shipments meet destination standards through a valid Certificate of Conformity.",
-    Icon: MdOutlineAssignment,
+    Icon: ClipboardCheck,
   },
   {
     title: "Carbon & Environment",
     description:
       "Carbon and environmental certification schemes that prove product and supply chain performance.",
-    Icon: MdOutlinePublic,
+    Icon: Leaf,
   },
 ];
 
@@ -83,9 +83,9 @@ function ServicesSection() {
           {SERVICES.map(({ title, description, Icon }) => (
             <div
               key={title}
-              className="group flex h-full flex-col gap-4 bg-brand-blue p-8 hover:bg-brand-blue-light"
+              className="group flex h-full flex-col gap-4 bg-brand-blue p-8 transition-colors duration-300 hover:bg-brand-blue-light"
             >
-              <Icon className="h-10 w-10 text-brand-green-light" />
+              <Icon className="h-10 w-10 text-brand-green-light transition-transform duration-300 group-hover:-translate-y-0.5" strokeWidth={1.6} />
               <h3 className="font-gotham text-lg font-black uppercase leading-tight text-white">
                 {title}
               </h3>

@@ -36,9 +36,9 @@ function GlobeVisual() {
         </g>
 
         <g>
-          {markers.map((marker, index) => (
+          {markers.map((marker) => (
             <g key={`${marker.cx}-${marker.cy}`}>
-              <circle cx={marker.cx} cy={marker.cy} r="8" className="globe-pulse fill-brand-green-light/20" style={{ animationDelay: `${index * 240}ms` }} />
+              <circle cx={marker.cx} cy={marker.cy} r="8" className="globe-pulse fill-brand-green-light/20" />
               <circle cx={marker.cx} cy={marker.cy} r="3.5" className="fill-brand-green-light" />
             </g>
           ))}

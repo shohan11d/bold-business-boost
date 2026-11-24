@@ -5,22 +5,25 @@ import { MdOutlineMail, MdOutlineCall, MdOutlinePlace } from "react-icons/md";
 import PageHero from "../components/PageHero";
 import FadeInUp from "../components/FadeInUp";
 import Button from "../components/Button";
+import { ArrowRight, ClipboardList, Globe2, PackageCheck } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact TICAdvisor — Talk to a TIC Specialist" },
+      { title: "Contact TIC Advisor — Talk to a TIC Specialist" },
       {
         name: "description",
         content:
           "Get in touch with TICAdvisor for testing, inspection, certification and training enquiries. Global offices and rapid response.",
       },
-      { property: "og:title", content: "Contact TICAdvisor" },
+      { property: "og:title", content: "Contact TIC Advisor" },
       {
         property: "og:description",
         content:
           "Get in touch with TICAdvisor for testing, inspection, certification and training enquiries.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: ContactPage,
@@ -173,6 +176,40 @@ function ContactPage() {
               </ul>
             </div>
           </FadeInUp>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 px-5 py-16 lg:py-24">
+        <div className="custom-container">
+          <FadeInUp>
+            <p className="eyebrow text-brand-blue-light">A good place to start</p>
+            <h2 className="mt-4 max-w-3xl font-gotham text-3xl font-black uppercase leading-tight text-brand-blue lg:text-5xl">
+              What would help us guide you?
+            </h2>
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-gray-600">
+              A few details help our team understand the question and point you toward the right conversation.
+            </p>
+          </FadeInUp>
+          <div className="mt-9 grid gap-px bg-gray-200 md:grid-cols-3">
+            <div className="bg-white p-7 lg:p-9">
+              <PackageCheck className="h-8 w-8 text-brand-blue-light" strokeWidth={1.6} aria-hidden="true" />
+              <h3 className="mt-5 font-gotham text-lg font-black uppercase text-brand-blue">Product or material</h3>
+              <p className="mt-2 text-sm leading-relaxed text-gray-600">Tell us what you make, source, ship or manage.</p>
+            </div>
+            <div className="bg-white p-7 lg:p-9">
+              <Globe2 className="h-8 w-8 text-brand-blue-light" strokeWidth={1.6} aria-hidden="true" />
+              <h3 className="mt-5 font-gotham text-lg font-black uppercase text-brand-blue">Market or location</h3>
+              <p className="mt-2 text-sm leading-relaxed text-gray-600">Share the destination market or the site that needs support.</p>
+            </div>
+            <div className="bg-white p-7 lg:p-9">
+              <ClipboardList className="h-8 w-8 text-brand-blue-light" strokeWidth={1.6} aria-hidden="true" />
+              <h3 className="mt-5 font-gotham text-lg font-black uppercase text-brand-blue">Your main question</h3>
+              <p className="mt-2 text-sm leading-relaxed text-gray-600">Describe the standard, concern or outcome you are working toward.</p>
+            </div>
+          </div>
+          <Link to="/services" className="mt-8 inline-flex items-center gap-2 font-gotham text-sm font-bold uppercase text-brand-blue transition-colors hover:text-brand-green">
+            Explore all services <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </section>
     </>
