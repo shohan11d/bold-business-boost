@@ -133,7 +133,7 @@ function ServicesPage() {
         eyebrow="Testing. Inspection. Certification"
         title="Services built for"
         highlight="regulated markets"
-        description="From a single laboratory analysis to a global assurance programme, TICAdvisor gives you the evidence you need to ship with confidence."
+        description="From a single laboratory analysis to a global assurance programme, TIC Advisor gives you the evidence you need to ship with confidence."
       />
 
       <section className="px-5 py-14 lg:py-20">

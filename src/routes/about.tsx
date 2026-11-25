@@ -102,7 +102,7 @@ function AboutPage() {
               Our mission
             </h2>
             <p className="mb-4 font-gotham text-base leading-relaxed text-gray-600 lg:text-lg">
-              Global supply chains move faster than the rules that govern them. TICAdvisor
+              Global supply chains move faster than the rules that govern them. TIC Advisor
               closes that gap with independent testing, inspection and certification that
               stands up to scrutiny anywhere in the world.
             </p>
@@ -117,7 +117,7 @@ function AboutPage() {
             <div className="overflow-hidden rounded-xl shadow-card">
               <img
                 src="/inspection.jpg"
-                alt="TICAdvisor inspector reviewing product quality on site"
+                alt="TIC Advisor inspector reviewing product quality on site"
                 className="h-full w-full object-cover"
                 loading="lazy"
               />

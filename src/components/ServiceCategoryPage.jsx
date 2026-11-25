@@ -1,10 +1,12 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 import { ArrowRight, Check, MoveRight } from "lucide-react";
 import PageHero from "./PageHero";
 import FadeInUp from "./FadeInUp";
 import Button from "./Button";
 
 function ServiceCategoryPage({ page, Icon }) {
+  const navigate = useNavigate();
+
   return (
     <>
       <PageHero
@@ -112,11 +114,12 @@ function ServiceCategoryPage({ page, Icon }) {
               {page.closingText}
             </p>
           </div>
-          <Link to="/contact" className="shrink-0">
-            <Button className="gap-2 px-6 py-3 text-sm">
-              Talk to our team <Check className="h-4 w-4" />
-            </Button>
-          </Link>
+          <Button
+            className="shrink-0 gap-2 px-6 py-3 text-sm"
+            onClick={() => navigate({ to: "/contact" })}
+          >
+            Talk to our team <Check className="h-4 w-4" />
+          </Button>
         </div>
       </section>
     </>

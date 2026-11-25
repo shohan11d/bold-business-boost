@@ -22,7 +22,7 @@ function Navbar() {
         </button>
 
         <Link to="/" className="cursor-pointer">
-          <img className="w-40" src="/icon1.svg" alt="TICAdvisor logo" />
+          <img className="w-40" src="/icon1.svg" alt="TIC Advisor logo" />
         </Link>
 
         <ul className="hidden h-full items-center min-[900px]:flex">

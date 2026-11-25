@@ -18,7 +18,7 @@ const ActOnIt = () => {
             that let you anticipate challenges before they become liabilities.
           </p>
           <p className="text-base font-medium leading-relaxed text-gray-700 md:text-xl">
-            TicAdvisor provides a comprehensive suite of verification,
+            TIC Advisor provides a comprehensive suite of verification,
             inspection and certification tools that turn complex data into
             decisive action. Stay compliant, ensure safety, and lead with
             confidence.

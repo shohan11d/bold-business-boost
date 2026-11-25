@@ -14,13 +14,13 @@ export const Route = createFileRoute("/events")({
       {
         name: "description",
         content:
-          "Join TICAdvisor at trade shows, technical webinars and training workshops on testing, inspection and certification.",
+          "Join TIC Advisor at trade shows, technical webinars and training workshops on testing, inspection and certification.",
       },
       { property: "og:title", content: "Events & Webinars | TIC Advisor" },
       {
         property: "og:description",
         content:
-          "Join TICAdvisor at trade shows, technical webinars and training workshops on testing, inspection and certification.",
+          "Join TIC Advisor at trade shows, technical webinars and training workshops on testing, inspection and certification.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -98,7 +98,7 @@ function EventsPage() {
         <div className="custom-container">
           <FadeInUp>
             <h2 className="mb-12 font-gotham text-3xl font-black uppercase tracking-tight leading-[0.95] text-brand-blue lg:text-5xl">
-              Featured events & learning
+              Events & learning sessions
             </h2>
           </FadeInUp>
 
@@ -135,7 +135,7 @@ function EventsPage() {
                       to="/contact"
                       className="mt-5 inline-flex items-center gap-2 font-gotham text-sm font-semibold text-brand-blue transition-colors hover:text-brand-green"
                     >
-                      Register interest <GoArrowRight />
+                      Ask about this topic <GoArrowRight />
                     </Link>
                   </div>
                 </article>
@@ -208,8 +208,11 @@ function EventsPage() {
                 <h3 className="font-gotham text-xl font-black uppercase text-brand-blue">Have a topic in mind?</h3>
                 <p className="mt-2 text-sm text-gray-600">Tell us what your team would like to learn about.</p>
               </div>
-              <Link to="/contact">
-                <Button className="px-6 py-3 text-sm">Suggest a topic</Button>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center bg-brand-green-light px-6 py-3 text-sm font-bold uppercase tracking-wider text-brand-blue transition-colors hover:bg-white"
+              >
+                Suggest a topic
               </Link>
             </div>
           </FadeInUp>

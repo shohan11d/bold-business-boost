@@ -85,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "TIC Advisor delivers expert testing, inspection and certification services for global supply chains.",
       },
-      { name: "author", content: "TICAdvisor" },
+      { name: "author", content: "TIC Advisor" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

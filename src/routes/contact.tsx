@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { MdOutlineMail, MdOutlineCall, MdOutlinePlace } from "react-icons/md";
 
 import PageHero from "../components/PageHero";
@@ -14,13 +14,13 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Get in touch with TICAdvisor for testing, inspection, certification and training enquiries. Global offices and rapid response.",
+          "Get in touch with TIC Advisor for testing, inspection, certification and training enquiries. Global offices and rapid response.",
       },
       { property: "og:title", content: "Contact TIC Advisor" },
       {
         property: "og:description",
         content:
-          "Get in touch with TICAdvisor for testing, inspection, certification and training enquiries.",
+          "Get in touch with TIC Advisor for testing, inspection, certification and training enquiries.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
