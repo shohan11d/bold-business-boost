@@ -9,3 +9,4 @@
 - [x] Expand About, Events, and Contact with relevant page sections.
 - [x] Build Testing, Inspection, Certification, and Training service pages and link them from Services.
 - [x] Verify metadata, desktop/mobile rendering, preview health, and commit the completed work.
+- [x] Replace the client logos with the latest uploaded PNG artwork and verify all client images load.

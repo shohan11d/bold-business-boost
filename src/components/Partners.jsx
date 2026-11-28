@@ -1,29 +1,32 @@
 import aciAsset from "../assets/client-logos/aci-transparent.png.asset.json";
-import ajinomotoAsset from "../assets/client-logos/ajinomoto.svg.asset.json";
-import akijInsafAsset from "../assets/client-logos/akij-insaf.jpg.asset.json";
-import akijResourcesAsset from "../assets/client-logos/akij-resources.webp.asset.json";
-import akijVentureAsset from "../assets/client-logos/akij-venture-official.png.asset.json";
+import ajinomotoAsset from "../assets/client-logos/ajinomoto-global-logo.png.asset.json";
+import akijInsafAsset from "../assets/client-logos/akij-insaf.png.asset.json";
+import akijResourcesAsset from "../assets/client-logos/akij-resources-logo.png.asset.json";
+import akijVentureAsset from "../assets/client-logos/akij-venture-logo.png.asset.json";
 import aquaPaintAsset from "../assets/client-logos/aqua-paint.png.asset.json";
 import bauAsset from "../assets/client-logos/bau.png.asset.json";
 import bombaySweetsAsset from "../assets/client-logos/bombay-sweets.png.asset.json";
 import dxnAsset from "../assets/client-logos/dxn.png.asset.json";
-import eliteSteelAsset from "../assets/client-logos/elite-steel.png.asset.json";
+import eliteSteelAsset from "../assets/client-logos/elite-steel-logo.png.asset.json";
 import gemconAsset from "../assets/client-logos/gemcon-group.avif.asset.json";
 import careNutritionAsset from "../assets/client-logos/care-nutrition.webp.asset.json";
 import icddrbAsset from "../assets/client-logos/icddrb-Logo-Vector.svg-.png.asset.json";
 import kishwanAsset from "../assets/client-logos/kishwan.png.asset.json";
 import meghnaGroupAsset from "../assets/client-logos/meghna-group-official.webp.asset.json";
-import newZealandDairyAsset from "../assets/client-logos/new-zealand-dairy.png.asset.json";
+import newZealandDairyAsset from "../assets/client-logos/new-zealand-dairy-logo.png.asset.json";
 import ovijatAsset from "../assets/client-logos/ovijat.png.asset.json";
-import pranAsset from "../assets/client-logos/pran-taste-of-life-transparent.png.asset.json";
+import pranAsset from "../assets/client-logos/pran-updated.png.asset.json";
 import reveAsset from "../assets/client-logos/reve-group.png.asset.json";
-import sauAsset from "../assets/client-logos/sau.png.asset.json";
-import senaKalyanAsset from "../assets/client-logos/sena-kalyan.svg.asset.json";
+import sauAsset from "../assets/client-logos/sher-e-bangla-agricultural-university.png.asset.json";
+import senaKalyanAsset from "../assets/client-logos/sena-kalyan.png.asset.json";
+import shajibBrotherAsset from "../assets/client-logos/shajib-brother-group.png.asset.json";
+import squareFoodAsset from "../assets/client-logos/square-food-and-beverage.png.asset.json";
 import unitedGroupAsset from "../assets/client-logos/united-group.svg.asset.json";
 
 const clients = [
   { name: "icddr,b", logo: icddrbAsset.url, logoClass: "max-h-16" },
   { name: "PRAN", logo: pranAsset.url, logoClass: "max-h-24" },
+  { name: "Shajib Brother GP", logo: shajibBrotherAsset.url, logoClass: "max-h-24 max-w-[82%]" },
   { name: "Akij Venture", logo: akijVentureAsset.url, logoClass: "max-h-14 max-w-[82%] sm:max-h-16" },
   { name: "Akij INSAF", logo: akijInsafAsset.url, logoClass: "max-h-24 scale-110 sm:max-h-24" },
   { name: "Akij Resources", logo: akijResourcesAsset.url },
@@ -39,11 +42,12 @@ const clients = [
   { name: "Elite Steel", logo: eliteSteelAsset.url },
   { name: "Aqua Paint", logo: aquaPaintAsset.url },
   { name: "Reve Group", logo: reveAsset.url, logoClass: "max-h-24 max-w-[88%] sm:max-h-24" },
-  { name: "Ajinomoto", logo: ajinomotoAsset.url },
+  { name: "Ajinomoto", logo: ajinomotoAsset.url, logoClass: "max-h-24" },
   { name: "Bombay Sweets & Co. Ltd.", logo: bombaySweetsAsset.url },
   { name: "Ovijat Food & Beverage Industries Ltd.", logo: ovijatAsset.url },
   { name: "Bangladesh Agricultural University", logo: bauAsset.url, logoClass: "max-h-24 scale-110 sm:max-h-24" },
-  { name: "New Zealand Dairy", logo: newZealandDairyAsset.url, logoClass: "max-h-20 w-full max-w-[94%] brightness-0 invert sm:max-h-20" },
+  { name: "New Zealand Dairy", logo: newZealandDairyAsset.url, logoClass: "max-h-24 w-full max-w-[94%] sm:max-h-24" },
+  { name: "Square Food & Beverage Ltd.", logo: squareFoodAsset.url, logoClass: "max-h-16 w-full max-w-[94%] sm:max-h-20" },
 ];
 
 const Partners = () => {
